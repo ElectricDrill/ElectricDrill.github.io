@@ -28,33 +28,196 @@
         </nav>
         <!-- Introduction section -->
         <section class="section">
-            <section class="section">
-                <div class="container has-text-centered mb-4">
-                    <img src="assets/electric-drill.png" alt="Electric Drill Icon" style="max-height:64px; width:auto;">
+            <div class="container">
+                <div class="hero-section">
+                    <div class="has-text-centered mb-4">
+                        <img src="assets/electric-drill.png" alt="Electric Drill Icon" class="hero-icon" style="max-height:64px; width:auto;">
+                    </div>
+                    <h1 class="hero-title">Tools and games created by gamers for gamers</h1>
+                    <p class="hero-text">I am Emanuele, a software engineer that always loved playing videogames. During my free time I work on my Unity Assets and on my videogames.</p>
+                    <p class="hero-text">P.O.Y.A. is my trusty friend, and he is a comics artist. He draws the graphical assets for my games.</p>
+                    <p class="hero-text">Electric Drill is our brand. It is not a company yet, but we are working for it to become!</p>
                 </div>
-                <div class="container">
-                    <h1 class="title">Tools and games created by gamers for gamers</h1>
-                    <p>I am Emanuele, a software engineer that always loved playing videogames. During my free time I work on my Unity Assets and on my videogames.</p>
-                    <p>P.O.Y.A. is my trusty friend, and he is comics artist. He draws the graphical assets for my games.</p>
-                    <p>Electric Drill is our brand. It is not a company yet, but we are working for it to become!</p>
-                </div>
-            </section>
+            </div>
         </section>
         <!-- Projects -->
         <section class="section">
             <div class="container">
-                <h2 class="title">Unity Assets</h2>
-                <div class="columns">
-                    <div class="column">
-                        <p>Simple RPG Core</p>
-                        <em>Work in progress. Will be updated soon...</em>
+                <h2 class="section-title">Unity Assets</h2>
+                <div class="columns is-multiline">
+                    <div class="column is-half">
+                        <div class="project-card">
+                            <h3 class="project-title">SOAP RPG Framework</h3>
+                            <p class="project-description">A simple and flexible RPG framework for Unity. With respect to other more complex frameworks, it aims to provide a more accessible and simpler solution for developers and game designers. It is also designed with low assumptions, to impose minimal constraints on the user.</p>
+                               <div class="project-links" style="margin-bottom: 1em;">
+                                   <a href="https://electricdrill.github.io/SoapRpgFrameworkDocs/index.html" class="project-link-btn" target="_blank" rel="noopener noreferrer">🏠 Package Homepage</a>
+                                   <a href="https://electricdrill.github.io/SoapRpgFrameworkDocs/MD/introduction.html" class="project-link-btn" target="_blank" rel="noopener noreferrer">📖 View Documentation</a>
+                                   <a href="https://electricdrill.github.io/SoapRpgFrameworkDocs/api/ElectricDrill.html" class="project-link-btn" target="_blank" rel="noopener noreferrer">🧩 Package API</a>
+                               </div>
+                            <div class="project-features">
+                                <div class="features-title">✨ Key Features</div>
+                                <p>Allows to manage the fundamental aspects of RPG development:</p>
+                                <ul>
+                                    <li>📊 Statistics and attributes definition</li>
+                                    <li>⭐ Experience and level management</li>
+                                    <li>🧑‍🎓 Character classes and progression</li>
+                                    <li>📈 Formulas for damage/values calculations</li>
+                                    <li>⚡ Game events for triggering actions and responses</li>
+                                    <li>⛏️ A set of re-usable utility tools that can be used for other aspects of the game</li>
+                                </ul>
+                            </div>
+                            <div class="project-features">
+                                <div class="features-title">💡 Smart Implementation</div>
+                                <p>It is built upon the SOAP (Scriptable Objects Architecture Pattern) principles, promoting the use of Scriptable Objects for:</p>
+                                <ul>
+                                    <li>🧱 Improved modularity</li>
+                                    <li>⚡ Quick and easy testability</li>
+                                    <li>🎮 Game Designer friendly - no programming skills required</li>
+                                    <li>📊 Data Driven Design - stats, attributes, classes, progression formulas are all assets</li>
+                                    <li>🔄️ No recompilation needed when tuning values. Many changes support <strong>hot-reloading</strong> at playtime</li>
+                                    <li>🤸‍♀️ So flexible that can be used for any game where there are entities with their own values</li>
+                                </ul>
+                            </div>
+                            <div class="project-timeline">
+                                <div class="timeline-title">⚒️ Development Progress</div>
+                                <div class="timeline-steps timeline-framework">
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Brainstorming</span>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Technical Design</span>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Implementation & Testing</span>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Validation</span>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Documentation</span>
+                                    </div>
+                                    <div class="timeline-step active">
+                                        <div class="step-icon active"></div>
+                                        <span class="step-text active">Publish</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="column">
-                        <p>Simple RPG Health</p>
-                        <em>Work in progress. Will be updated soon...</em>
+                    <div class="column is-half">
+                        <div class="project-card rpg-health">
+                            <div class="dependency-badge">🔗 Requires: SOAP RPG Framework</div>
+                            <h3 class="project-title">SOAP RPG Health</h3>
+                            <p class="project-description">A health and damage framework for RPGs. It is developed with the same principles as the SOAP RPG Framework, and it is thought to integrate seamlessly with it.
+                                If you want to speed up your RPG development, this is the perfect add-on to manage health, damage, resistances, healing, death and respawn mechanics.
+                            </p>
+                            <div class="project-features">
+                                <div class="features-title">✨ Key Features</div>
+                                <ul>
+                                    <li>💚 Health system tailored for RPGs</li>
+                                    <li>🩸 Define your own damage types</li>
+                                    <li>⚔️ Damage calculation and application</li>
+                                    <li>🛡️ Damage resistance and defense penetration mechanics</li>
+                                    <li>🩹 Healing system</li>
+                                    <li>💀 Death and respawn mechanics</li>
+                                    <li>⚡ Health/damage based events</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="project-timeline">
+                                <div class="timeline-title">⚒️ Development Progress</div>
+                                <div class="timeline-steps timeline-health">
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Brainstorming</span>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Technical Design</span>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon completed">✓</div>
+                                        <span class="step-text completed">Implementation & Testing</span>
+                                    </div>
+                                    <div class="timeline-step active">
+                                        <div class="step-icon active"></div>
+                                        <span class="step-text active">Validation</span>
+                                    </div>
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon pending">○</div>
+                                        <span class="step-text pending">Documentation</span>
+                                    </div>
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon pending">○</div>
+                                        <span class="step-text pending">Publish</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="dependency-badge">🔗 Requires: SOAP RPG Framework</div>
+                            <h3 class="project-title">SOAP RPG Modifiers</h3>
+                            <p class="project-description">A powerful and flexible modifier system for Unity RPG games. Apply temporary or permanent effects to characters, items, and game objects with precise control over duration, conditions, and complexity.</p>
+                            <div class="project-features">
+                                <div class="features-title">✨ Key Features</div>
+                                <ul>
+                                    <li>⏰ Real-time and turn-based duration support</li>
+                                    <li>📊 Statistics and attributes modifiers</li>
+                                    <li>🔧 Complex modifiers customization - all from the inspector</li>
+                                    <li>🎯 Custom modifiers that rely on strategy pattern, for the most specific modifiers</li>
+                                    <li><em>🔜 More features coming soon!</em></li>
+                                </ul>
+                            </div>
+                            <div class="project-timeline">
+                                <div class="timeline-title">⚒️ Development Progress</div>
+                                <div class="timeline-steps timeline-modifiers">
+                                    <div class="timeline-step active">
+                                        <div class="step-icon active"></div>
+                                        <span class="step-text active">Brainstorming</span>
+                                    </div>
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon pending">○</div>
+                                        <span class="step-text pending">Technical Design</span>
+                                    </div>
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon pending">○</div>
+                                        <span class="step-text pending">Implementation & Testing</span>
+                                    </div>
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon pending">○</div>
+                                        <span class="step-text pending">Validation</span>
+                                    </div>
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon pending">○</div>
+                                        <span class="step-text pending">Documentation</span>
+                                    </div>
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon pending">○</div>
+                                        <span class="step-text pending">Publish</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+                    <!-- Contact Invitation Box -->
+            <div class="contact-invite-box">
+                <h4>Have questions or need more information?</h4>
+                <p>Feel free to <a href="mailto:electricdrill.info@gmail.com" class="contact-link">contact us via email</a> for any inquiries, feedback, or ideas!</p>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a></span>
+                </div>
+            </footer>
     </body>
 </html>
