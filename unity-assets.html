@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unity Assets - Electric Drill</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    .simple-carousel { position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.08); border-radius:10px; background:rgba(255,255,255,0.03); margin:1rem 0 1.75rem; }
+    .simple-carousel-track { display:flex; width:100%; transition:transform .55s cubic-bezier(.4,.15,.2,1); }
+    .simple-carousel-slide { flex:0 0 100%; max-width:100%; display:flex; align-items:center; justify-content:center; }
+    .simple-carousel-slide img { width:100%; height:auto; object-fit:cover; display:block; }
+    .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border:none; background:rgba(0,0,0,.5); backdrop-filter:blur(4px); color:#fff; font-size:1.85rem; line-height:1; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .25s; }
+    .carousel-btn:hover { background:rgba(0,0,0,.7); }
+    .carousel-prev { left:10px; }
+    .carousel-next { right:10px; }
+    .carousel-dots { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px; }
+    .carousel-dot { width:11px; height:11px; border-radius:50%; border:0; background:rgba(255,255,255,.28); cursor:pointer; padding:0; transition:background .3s, transform .3s; }
+    .carousel-dot.active { background:#ffca28; transform:scale(1.15); }
+    .carousel-btn:focus-visible, .carousel-dot:focus-visible { outline:2px solid #ffca28; outline-offset:2px; }
+    @media (max-width:768px){ .carousel-btn { width:38px; height:38px; font-size:1.6rem; } }
+  </style>
+</head>
+<body class="theme-dark">
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="assets/electric-drill-icon.png" alt="Logo" style="max-height:64px; width:auto;">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a href="index.html" class="navbar-item">Home</a>
+        <a href="#" class="navbar-item is-active" aria-current="page">Unity Assets</a>
+        <a href="#" class="navbar-item">Who we are</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title unity-assets-title">🧊 Unity Assets</h2>
+      <div class="unity-assets-accent-bar"></div>
+      <!-- SOAP RPG Framework Card -->
+      <div class="project-card asset-card" id="soap-rpg-framework">
+        <div class="asset-labels"><span class="coming-soon-badge">🚀 Coming soon!</span></div>
+        <h3 class="project-title">🧩 SOAP RPG Framework</h3>
+        <div class="simple-carousel" data-carousel>
+          <div class="simple-carousel-track">
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/1.png" alt="Framework screenshot 1"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/2.png" alt="Framework screenshot 2"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/3.png" alt="Framework screenshot 3"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/4.png" alt="Framework screenshot 4"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/5.png" alt="Framework screenshot 5"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/6.png" alt="Framework screenshot 6"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/7.png" alt="Framework screenshot 7"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/8.png" alt="Framework screenshot 8"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/9.png" alt="Framework screenshot 9"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/10.png" alt="Framework screenshot 10"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/11.png" alt="Framework screenshot 11"></div>
+          </div>
+          <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+          <div class="carousel-dots" role="tablist" aria-label="Slide selector">
+            <button class="carousel-dot active" aria-label="Slide 1" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 2" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 3" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 4" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 5" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 6" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 7" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 8" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 9" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 10" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 11" role="tab"></button>
+          </div>
+        </div>
+        <!-- Description Sections -->
+        <div class="asset-section introduction">
+          <h4>👉 Introduction</h4>
+
+          <strong>Say goodbye to endless recompilations. Instantly balance your RPG's stats and formulas with a powerful data-driven system.</strong>
+          <p>SOAP RPG Framework provides a complete, data-driven backbone for your RPG, allowing you to define your game foundations all from the editor and iterate on game <strong>balance in play-time</strong>.</p>
+          <p>Simple, lightweight, and easy to learn. No configuration needed: <strong>works out of the box with zero setup</strong>.</p>
+        </div>
+        <div class="asset-section key-features">
+          <h4>✨ Key Features</h4>
+          <ul>
+            <li>📊 <strong>Statistics & Attributes:</strong> Define your game's fundamental building blocks</li>
+            <li>⭐ <strong>Experience & Levels:</strong> Implement a robust levels progression system</li>
+            <li>🧑‍🎓 <strong>Classes & Progression:</strong> Model your own classes and the character progression over levels</li>
+            <li>📈 <strong>Scaling Formulas:</strong> Easily create complex formulas for damage, healing, and other values based on entities' stats and attributes</li>
+            <li>⚡ <strong>Event System:</strong> Enable dynamic interactions between game objects by using inspector-wired events and listeners</li>
+            <li>🛠️ <strong>Utilities:</strong> A collection of helpful tools to improve the game development even further. Ever used Int and Long variables as ScriptableObjects? Come see what you can do with them!</li>
+        </ul>
+        </div>
+        <div class="asset-section implementation-notes">
+            <h4>🧼 Implemented on top of SOAP: Scriptable Object Architecture Pattern</h4>
+            <ul>
+                <li>🎨 <strong>Game designers friendly:</strong> All the features are ScriptableObjects that can be created and wired-up in the Unity Inspector. Custom inspectors are available for all the features.</li>
+                <li>🧩 <strong>Promotes reusability and modularity:</strong> the objects can be easily reused across different game objects and scenes. They are the fundamental blocks for your game. <strong>Instantiate, compose, reuse</strong>. Changes on each instance reflect immediately on the dependent objects. No duplication, no hassle.</li>
+                <li>🧪 <strong>Easier testing:</strong> Without exiting play-time you can swap objects, switch from class-based stats to fixed ones, replace complex scaling formulas with simpler ones. Testing and debugging becomes a breeze.</li>
+            </ul>
+        </div>
+        <div class="asset-section features-breakdown">
+          <h4>🔍 Features Breakdown</h4>
+          <div class="asset-sub-section">
+            <h5>Attributes</h5>
+            <p>Attributes are the fundamental numerical values that define an entity's capabilities. In most RPGs they are: strength, dexterity, intelligence, constitution, etc. However, you define your own attributes. You choose the names and the min and max values (if any).</p>
+            <p>Then you can group them in attribute sets. A easily sharable object that can be reused across different entities.</p>
+            <p>Apply flat or percentage modifiers to your entities' attributes.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5>Statistics</h5>
+            <p>Statistics are the derived, in-game values that directly impact gameplay (such as Physical Attack, Armor, or Crit Chance). As for attributes, you can define your own and group them in statistic sets to be assigned to entities. Such stat sets can also be modular, for example you can define the a stat set for the movement statistic, one for dealing damage, and one for receiving damage. You can then define sets on the base of them basing on the entity's needs, so that you assign only the relevant stats to each entity.</p>
+            <p>Statistics can scale with attributes. Define how each statistic scales on the base of one or more attributes.</p>
+            <p>As for attributes, statistics can have lower and upper bounds.</p>
+            <p>Statistics can also have flat and percentage modifiers. Moreover, they support the powerful stat-to-stat modifiers. They allow you to create buffs/debuffs that change a statistic basing on the value of another statistic.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5>Experience & Levels</h5>
+            <p>Define your own level progression curves, and the experience required to reach each level.</p>
+            <p>If an entity doesn't level up, you can set fixed base stats and attributes.</p>
+        </div>
+        <div>
+          <h5>Classes & Progression</h5>
+          <p>Through classes (such as warrior, mage, rogue, etc.), you can define unique attributes and statistics progression paths. Assign progression curves for each attribute and statistic to each class, to give them the unique flavor and playstyle.</p>
+        </div>
+        <div class="asset-section requirements">
+          <h4>📋 Requirements</h4>
+          <ul>
+            <li>🖥️ Unity 2022 LTS or newer</li>
+            <li>⚙️ .NET Standard 2.1 compatible scripting backend</li>
+            <li>☑️ No third-party dependencies</li>
+          </ul>
+        </div>
+        <div class="asset-section where-to-buy">
+          <h4>🛒 Where to Buy</h4>
+          <p>Unity Asset Store (planned). Page will be linked upon release.</p>
+        </div>
+        <div class="asset-section contacts">
+          <h4>📬 Information & Contact</h4>
+          <p>Questions, feedback or bugs? Send us an email at <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+        </div>
+        <div class="asset-section links">
+          <h4>🔗 Links</h4>
+          <div class="project-links">
+            <a href="https://electricdrill.github.io/SoapRpgFrameworkDocs/index.html" class="project-link-btn" target="_blank" rel="noopener noreferrer">🏠 Homepage</a>
+            <a href="https://electricdrill.github.io/SoapRpgFrameworkDocs/MD/introduction.html" class="project-link-btn" target="_blank" rel="noopener noreferrer">📖 Docs</a>
+            <a href="https://electricdrill.github.io/SoapRpgFrameworkDocs/api/ElectricDrill.html" class="project-link-btn" target="_blank" rel="noopener noreferrer">🧩 API</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOAP RPG Health Card -->
+      <div class="project-card asset-card rpg-health" id="soap-rpg-health">
+        <div class="asset-labels"><span class="dependency-badge">🔗 Requires: SOAP RPG Framework</span><span class="status-note">Status: Validation</span></div>
+        <h3 class="project-title">💚 SOAP RPG Health</h3>
+        <div class="simple-carousel" data-carousel>
+          <div class="simple-carousel-track">
+            <div class="simple-carousel-slide"><img src="assets/electric-drill.png" alt="Placeholder health module"></div>
+          </div>
+          <button class="carousel-btn carousel-prev" aria-label="Previous" disabled>‹</button>
+          <button class="carousel-btn carousel-next" aria-label="Next" disabled>›</button>
+          <div class="carousel-dots" role="tablist"><button class="carousel-dot active" aria-label="Slide 1" role="tab"></button></div>
+        </div>
+        <div class="asset-section introduction">
+          <h4>Introduction 🩺</h4>
+          <p>Extensible health & damage layer integrating with the core framework to handle vitality flow: damage reception, mitigation, healing, death and respawn sequences.</p>
+        </div>
+        <div class="asset-section key-features">
+          <h4>Key Features ✨</h4>
+          <ul>
+            <li>🩸 Custom damage type assets</li>
+            <li>🛡️ Resistance & penetration model</li>
+            <li>⚡ Event hooks for damage / death / revive</li>
+            <li>🩹 Heals, shields & over-heal patterns (planned)</li>
+            <li>🧮 Extensible calculation pipeline</li>
+          </ul>
+        </div>
+        <div class="asset-section requirements">
+          <h4>Requirements 📋</h4>
+          <ul>
+            <li>🧩 SOAP RPG Framework (matching minor version)</li>
+            <li>🖥️ Unity 2021.3 LTS or newer</li>
+          </ul>
+        </div>
+        <div class="asset-section where-to-buy">
+          <h4>Where to Buy 🛒</h4>
+          <p>Planned for Unity Asset Store after validation & documentation phases.</p>
+        </div>
+        <div class="asset-section contacts">
+          <h4>Information & Contact 📬</h4>
+            <p>Feature requests welcome: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+        </div>
+        <div class="asset-section links">
+          <h4>Links 🔗</h4>
+          <p>No public docs yet. Will follow framework release.</p>
+        </div>
+      </div>
+
+      <!-- SOAP RPG Modifiers Card -->
+      <div class="project-card asset-card" id="soap-rpg-modifiers">
+        <div class="asset-labels"><span class="dependency-badge">🔗 Requires: SOAP RPG Framework</span><span class="status-note">Status: Brainstorming</span></div>
+        <h3 class="project-title">🧬 SOAP RPG Modifiers</h3>
+        <div class="simple-carousel" data-carousel>
+          <div class="simple-carousel-track">
+            <div class="simple-carousel-slide"><img src="assets/electric-drill.png" alt="Placeholder modifiers module"></div>
+          </div>
+          <button class="carousel-btn carousel-prev" aria-label="Previous" disabled>‹</button>
+          <button class="carousel-btn carousel-next" aria-label="Next" disabled>›</button>
+          <div class="carousel-dots" role="tablist"><button class="carousel-dot active" aria-label="Slide 1" role="tab"></button></div>
+        </div>
+        <div class="asset-section introduction">
+          <h4>Introduction 🧬</h4>
+          <p>A dynamic layering system for temporary or permanent stat & attribute alterations supporting stacking rules, duration strategies and custom effect logic.</p>
+        </div>
+        <div class="asset-section key-features">
+          <h4>Key Features ✨</h4>
+          <ul>
+            <li>⏰ Real-time & turn-based duration modes</li>
+            <li>📊 Additive / multiplicative / override layers</li>
+            <li>🔧 Custom strategy injection points</li>
+            <li>⚔️ Conflict & stacking policies (planned)</li>
+            <li>🛠️ Inspector-driven authoring workflow</li>
+          </ul>
+        </div>
+        <div class="asset-section requirements">
+          <h4>Requirements 📋</h4>
+          <ul>
+            <li>🧩 SOAP RPG Framework</li>
+            <li>🖥️ Unity 2021.3 LTS or newer</li>
+          </ul>
+        </div>
+        <div class="asset-section where-to-buy">
+          <h4>Where to Buy 🛒</h4>
+          <p>Will enter design phase after Health module release. Store listing TBD.</p>
+        </div>
+        <div class="asset-section contacts">
+          <h4>Information & Contact 📬</h4>
+          <p>Early design collaboration: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+        </div>
+        <div class="asset-section links">
+          <h4>Links 🔗</h4>
+          <p>Documentation & demos will appear after prototype milestone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Roadmap Philosophy</h2>
+      <p class="hero-text">Each package is isolated, testable, and minimal in assumptions. Composition over inheritance, ScriptableObject-first design, and tooling for rapid iteration.</p>
+    </div>
+  </section>
+
+  <div class="contact-invite-box">
+    <h4>Need details or early access?</h4>
+    <p><a href="mailto:electricdrill.info@gmail.com" class="contact-link">Contact us</a> to share use cases or request previews.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a></span>
+    </div>
+  </footer>
+  <script>
+    // Mini JS per far funzionare bottoni e puntini
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('.simple-carousel').forEach(function(car){
+        const track = car.querySelector('.simple-carousel-track');
+        const slides = Array.from(track.children);
+        const prev = car.querySelector('.carousel-prev');
+        const next = car.querySelector('.carousel-next');
+        const dots = Array.from(car.querySelectorAll('.carousel-dot'));
+        let index = 0;
+        if(slides.length <= 1){ return; }
+        function go(i){
+          index = (i + slides.length) % slides.length;
+          track.style.transform = 'translateX(' + (-index*100) + '%)';
+          dots.forEach((d,j)=> d.classList.toggle('active', j===index));
+        }
+        prev.addEventListener('click', ()=> go(index-1));
+        next.addEventListener('click', ()=> go(index+1));
+        dots.forEach((d,i)=> d.addEventListener('click', ()=> go(i)));
+      });
+    });
+  </script>
+</body>
+</html>
