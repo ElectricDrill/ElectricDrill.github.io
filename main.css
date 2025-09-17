@@ -25,11 +25,30 @@ body {
     transition: all 0.3s ease;
     border-radius: 6px;
     margin: 0 0.25rem;
+    background: linear-gradient(90deg, #a8edea 0%, #b6b7f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .navbar-item:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
+    -webkit-background-clip: padding-box;
+    -webkit-text-fill-color: white;
+    background-clip: padding-box;
+}
+
+/* Active navbar item styling */
+.navbar-item.is-active {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: padding-box;
+    -webkit-text-fill-color: white;
+    background-clip: padding-box;
+}
+
+.navbar-item.is-active:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Hero Section Styling */
