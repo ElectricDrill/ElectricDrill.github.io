@@ -19,6 +19,11 @@
     .carousel-dot.active { background:#ffca28; transform:scale(1.15); }
     .carousel-btn:focus-visible, .carousel-dot:focus-visible { outline:2px solid #ffca28; outline-offset:2px; }
     @media (max-width:768px){ .carousel-btn { width:38px; height:38px; font-size:1.6rem; } }
+
+    /* New styles for features breakdown section */
+    .asset-sub-section { margin-bottom: 1.5rem; }
+    .asset-sub-title { font-size: 1.25rem; font-weight: 500; margin-bottom: 0.5rem; color: #ffca28; }
+    .asset-section.features-breakdown { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
   </style>
 </head>
 <body class="theme-dark">
@@ -44,12 +49,17 @@
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title unity-assets-title">🧊 Unity Assets</h2>
+      <h2 class="section-title unity-assets-title">🧩 Unity Assets</h2>
       <div class="unity-assets-accent-bar"></div>
       <!-- SOAP RPG Framework Card -->
       <div class="project-card asset-card" id="soap-rpg-framework">
-        <div class="asset-labels"><span class="coming-soon-badge">🚀 Coming soon!</span></div>
-        <h3 class="project-title">🧩 SOAP RPG Framework</h3>
+        <div class="asset-title-container">
+          <h3 class="project-title">🛠️ SOAP RPG Framework</h3>
+          <div class="asset-labels">
+            <span class="badge coming-soon-badge">🚀 Coming soon!</span>
+            <span class="badge status-badge-publish">🌐 Status: Publishing</span>
+          </div>
+        </div>
         <div class="simple-carousel" data-carousel>
           <div class="simple-carousel-track">
             <div class="simple-carousel-slide"><img src="assets/unity-assets/soap-rpg-framework/1.png" alt="Framework screenshot 1"></div>
@@ -85,51 +95,77 @@
           <h4>👉 Introduction</h4>
 
           <strong>Say goodbye to endless recompilations. Instantly balance your RPG's stats and formulas with a powerful data-driven system.</strong>
-          <p>SOAP RPG Framework provides a complete, data-driven backbone for your RPG, allowing you to define your game foundations all from the editor and iterate on game <strong>balance in play-time</strong>.</p>
-          <p>Simple, lightweight, and easy to learn. No configuration needed: <strong>works out of the box with zero setup</strong>.</p>
+          <p>SOAP RPG Framework provides a complete, data-driven backbone for your RPG, letting you define your game's foundations directly in the editor and iterate on <strong>balance during play mode</strong>.</p>
+          <p>Simple, lightweight, and easy to learn. No configuration required: <strong>works out of the box with zero setup</strong>.</p>
         </div>
         <div class="asset-section key-features">
           <h4>✨ Key Features</h4>
           <ul>
-            <li>📊 <strong>Statistics & Attributes:</strong> Define your game's fundamental building blocks</li>
-            <li>⭐ <strong>Experience & Levels:</strong> Implement a robust levels progression system</li>
-            <li>🧑‍🎓 <strong>Classes & Progression:</strong> Model your own classes and the character progression over levels</li>
-            <li>📈 <strong>Scaling Formulas:</strong> Easily create complex formulas for damage, healing, and other values based on entities' stats and attributes</li>
-            <li>⚡ <strong>Event System:</strong> Enable dynamic interactions between game objects by using inspector-wired events and listeners</li>
-            <li>🛠️ <strong>Utilities:</strong> A collection of helpful tools to improve the game development even further. Ever used Int and Long variables as ScriptableObjects? Come see what you can do with them!</li>
+            <li>📊 <strong>Statistics & Attributes:</strong> Define the core building blocks for your game</li>
+            <li>⭐ <strong>Experience & Levels:</strong> Build a robust progression system</li>
+            <li>🧑‍🎓 <strong>Classes & Progression:</strong> Design custom classes and unique progression paths</li>
+            <li>📈 <strong>Scaling Formulas:</strong> Create complex formulas for damage, healing, and other values using entities' stats and attributes</li>
+            <li>⚡ <strong>Event System:</strong> Enable dynamic game-object interactions with inspector-wired events and listeners</li>
+            <li>🛠️ <strong>Utilities:</strong> Helpful tools to streamline development. Ever used Int and Long variables as ScriptableObjects? Discover new possibilities!</li>
         </ul>
         </div>
         <div class="asset-section implementation-notes">
             <h4>🧼 Implemented on top of SOAP: Scriptable Object Architecture Pattern</h4>
             <ul>
-                <li>🎨 <strong>Game designers friendly:</strong> All the features are ScriptableObjects that can be created and wired-up in the Unity Inspector. Custom inspectors are available for all the features.</li>
-                <li>🧩 <strong>Promotes reusability and modularity:</strong> the objects can be easily reused across different game objects and scenes. They are the fundamental blocks for your game. <strong>Instantiate, compose, reuse</strong>. Changes on each instance reflect immediately on the dependent objects. No duplication, no hassle.</li>
-                <li>🧪 <strong>Easier testing:</strong> Without exiting play-time you can swap objects, switch from class-based stats to fixed ones, replace complex scaling formulas with simpler ones. Testing and debugging becomes a breeze.</li>
+                <li>🎨 <strong>Designer-friendly:</strong> All features are ScriptableObjects, easily created and wired in the Unity Inspector. Custom inspectors are available for everything.</li>
+                <li>🧩 <strong>Reusable and modular:</strong> Objects can be reused across game objects and scenes. They are the building blocks for your game. <strong>Instantiate, compose, reuse</strong>. Changes instantly reflect on dependent objects. No duplication, no hassle.</li>
+                <li>🧪 <strong>Easy testing:</strong> Swap objects, switch from class-based stats to fixed ones, or replace complex formulas—all without leaving play mode. Debugging and testing is effortless.</li>
             </ul>
         </div>
         <div class="asset-section features-breakdown">
           <h4>🔍 Features Breakdown</h4>
           <div class="asset-sub-section">
-            <h5>Attributes</h5>
-            <p>Attributes are the fundamental numerical values that define an entity's capabilities. In most RPGs they are: strength, dexterity, intelligence, constitution, etc. However, you define your own attributes. You choose the names and the min and max values (if any).</p>
-            <p>Then you can group them in attribute sets. A easily sharable object that can be reused across different entities.</p>
-            <p>Apply flat or percentage modifiers to your entities' attributes.</p>
+            <h5 class="asset-sub-title">🕸️ Attributes</h5>
+            <p>Attributes are the core numerical values that define an entity's capabilities. In most RPGs these include strength, dexterity, intelligence, constitution, etc. You define your own attributes, choosing their names and min/max values as needed.</p>
+            <p>Group attributes into attribute sets—shareable objects reusable across entities.</p>
+            <p>Supports both flat and percentage modifiers.</p>
           </div>
           <div class="asset-sub-section">
-            <h5>Statistics</h5>
-            <p>Statistics are the derived, in-game values that directly impact gameplay (such as Physical Attack, Armor, or Crit Chance). As for attributes, you can define your own and group them in statistic sets to be assigned to entities. Such stat sets can also be modular, for example you can define the a stat set for the movement statistic, one for dealing damage, and one for receiving damage. You can then define sets on the base of them basing on the entity's needs, so that you assign only the relevant stats to each entity.</p>
-            <p>Statistics can scale with attributes. Define how each statistic scales on the base of one or more attributes.</p>
-            <p>As for attributes, statistics can have lower and upper bounds.</p>
-            <p>Statistics can also have flat and percentage modifiers. Moreover, they support the powerful stat-to-stat modifiers. They allow you to create buffs/debuffs that change a statistic basing on the value of another statistic.</p>
+            <h5 class="asset-sub-title">📊 Statistics</h5>
+            <p>Statistics are derived values that directly affect gameplay, such as Physical Attack, Armor, Crit Chance, and movement speed. Define custom statistics and organize them into sets tailored for each entity. Statistic sets can be modular—for example, create separate sets for movement, offense, and defense, then assign only what's relevant to each entity.</p>
+            <p>Statistics can scale with attributes. Define how each statistic scales based on one or more attributes.</p>
+            <p>Like attributes, statistics can have lower and upper bounds.</p>
+            <p>Statistics support flat and percentage modifiers, plus powerful stat-to-stat modifiers. Create buffs/debuffs that change a statistic based on another statistic's value.</p>
           </div>
           <div class="asset-sub-section">
-            <h5>Experience & Levels</h5>
-            <p>Define your own level progression curves, and the experience required to reach each level.</p>
-            <p>If an entity doesn't level up, you can set fixed base stats and attributes.</p>
+            <h5 class="asset-sub-title">⭐ Experience & Levels</h5>
+            <p>Define custom level progression curves and experience requirements for each level.</p>
+            <p>If an entity doesn't level up, set fixed base stats and attributes. Set up simple entities in seconds.</p>
         </div>
-        <div>
-          <h5>Classes & Progression</h5>
-          <p>Through classes (such as warrior, mage, rogue, etc.), you can define unique attributes and statistics progression paths. Assign progression curves for each attribute and statistic to each class, to give them the unique flavor and playstyle.</p>
+        <div class="asset-sub-section">
+          <h5 class="asset-sub-title">🧑‍🎓 Classes & Progression</h5>
+          <p>Classes (like warrior, mage, rogue, etc.) let you define unique progression paths for attributes and statistics. Assign progression curves for each attribute and statistic to each class for distinct play styles.</p>
+            <p>Balance progression curves in real-time—<strong>test and iterate instantly during play mode</strong>.</p>
+        </div>
+        <div class="asset-sub-section">
+          <h5 class="asset-sub-title">📈 Scaling Formulas</h5>
+          <p>Easily build complex formulas for damage, healing, and other values using stats and attributes. Drag and drop scaling components to visually assemble formulas in the custom inspector.</p>
+          <p>Formulas are fully customizable. Set a fixed base value or make it scale dynamically with levels. Add scaling components to adjust values based on the caster’s or target’s stats and attributes—or both.</p>
+          <p>Add and remove temporary scaling components at runtime for advanced mechanics. For example, a potion might grant "Your next base attack deals extra damage equal to 50% of your Constitution." Drinking it adds a temporary scaling component to the base attack formula; after the attack, the temporary scaling component is removed.</p>
+          <p>Reuse formulas across entities and scenarios for consistency and reduced redundancy.</p>
+          <strong>See the impact of changes instantly in play mode, enabling rapid iteration and fine-tuning of game balance.</strong>
+        </div>
+        <div class="asset-sub-section">
+          <h5 class="asset-sub-title">⚡ Game Events</h5>
+          <p>Game events are ScriptableObjects. Instantiate events in your assets, then drag & drop them into scripts that raise them and into Game Event Listeners that define responses. Testing your game's logic from the inspector is easier than ever.</p>
+          <p>The framework provides a set of predefined game events (and MonoBehaviour listeners) to get you started quickly:</p>
+          <ul>
+            <li><strong>GameEvent</strong>: No context parameters. For simple events like 'Player Jumped', 'Player Slept', etc.</li>
+            <li><strong>IntGameEvent</strong>: One integer context parameter. For example, 'Player Leveled Up' uses the new level as the context.</li>
+            <li><strong>StatChangedGameEvent</strong>: Notifies when a stat changes for a specific entity.</li>
+            <li><strong>AttributeChangedGameEvent</strong>: Notifies when an attribute changes for a specific entity.</li>
+          </ul>
+        </div>
+        <div class="asset-sub-section">
+          <h5 class="asset-sub-title">🏭⚡ Game Event Generators</h5>
+          <p>Game Event Generators are powerful tools for generating C# source code for custom game events. Use the custom inspector to create new event types with up to 4 context parameters—these can be native C# types or your own classes.</p>
+          <p>Game Event Generators are also ScriptableObjects. Instantiate multiple generators to organize different sets of events for your project. Each generator can manage its own context-specific events.</p>
+        </div>
         </div>
         <div class="asset-section requirements">
           <h4>📋 Requirements</h4>
@@ -141,11 +177,11 @@
         </div>
         <div class="asset-section where-to-buy">
           <h4>🛒 Where to Buy</h4>
-          <p>Unity Asset Store (planned). Page will be linked upon release.</p>
+          <p>Unity Asset Store (planned). Link will be available upon release.</p>
         </div>
         <div class="asset-section contacts">
           <h4>📬 Information & Contact</h4>
-          <p>Questions, feedback or bugs? Send us an email at <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+          <p>Questions, feedback, or bugs? Email us at <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
         </div>
         <div class="asset-section links">
           <h4>🔗 Links</h4>
@@ -159,8 +195,13 @@
 
       <!-- SOAP RPG Health Card -->
       <div class="project-card asset-card rpg-health" id="soap-rpg-health">
-        <div class="asset-labels"><span class="dependency-badge">🔗 Requires: SOAP RPG Framework</span><span class="status-note">Status: Validation</span></div>
-        <h3 class="project-title">💚 SOAP RPG Health</h3>
+        <div class="asset-title-container">
+          <h3 class="project-title">💚 SOAP RPG Health</h3>
+          <div class="asset-labels">
+            <span class="badge dependency-badge">🔗 Requires: SOAP RPG Framework</span>
+            <span class="badge status-badge-validation">✅ Status: Validation</span>
+          </div>
+        </div>
         <div class="simple-carousel" data-carousel>
           <div class="simple-carousel-track">
             <div class="simple-carousel-slide"><img src="assets/electric-drill.png" alt="Placeholder health module"></div>
@@ -206,8 +247,13 @@
 
       <!-- SOAP RPG Modifiers Card -->
       <div class="project-card asset-card" id="soap-rpg-modifiers">
-        <div class="asset-labels"><span class="dependency-badge">🔗 Requires: SOAP RPG Framework</span><span class="status-note">Status: Brainstorming</span></div>
-        <h3 class="project-title">🧬 SOAP RPG Modifiers</h3>
+        <div class="asset-title-container">
+          <h3 class="project-title">🧬 SOAP RPG Modifiers</h3>
+          <div class="asset-labels">
+            <span class="badge dependency-badge">🔗 Requires: SOAP RPG Framework</span>
+            <span class="badge status-badge-brainstorming">🧠 Status: Brainstorming</span>
+          </div>
+        </div>
         <div class="simple-carousel" data-carousel>
           <div class="simple-carousel-track">
             <div class="simple-carousel-slide"><img src="assets/electric-drill.png" alt="Placeholder modifiers module"></div>
@@ -256,14 +302,9 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title">Roadmap Philosophy</h2>
-      <p class="hero-text">Each package is isolated, testable, and minimal in assumptions. Composition over inheritance, ScriptableObject-first design, and tooling for rapid iteration.</p>
+      <p class="hero-text">Each package is isolated, testable, and makes minimal assumptions. We favor composition over inheritance, ScriptableObject-first design, and tools for rapid iteration.</p>
     </div>
   </section>
-
-  <div class="contact-invite-box">
-    <h4>Need details or early access?</h4>
-    <p><a href="mailto:electricdrill.info@gmail.com" class="contact-link">Contact us</a> to share use cases or request previews.</p>
-  </div>
 
   <footer class="footer">
     <div class="content has-text-centered">
@@ -271,7 +312,6 @@
     </div>
   </footer>
   <script>
-    // Mini JS per far funzionare bottoni e puntini
     document.addEventListener('DOMContentLoaded', function(){
       document.querySelectorAll('.simple-carousel').forEach(function(car){
         const track = car.querySelector('.simple-carousel-track');
