@@ -375,31 +375,3 @@
   </script>
 </body>
 </html>
-              const $target = document.getElementById(target);
-              el.classList.toggle('is-active');
-              $target.classList.toggle('is-active');
-          });
-      });
-      
-      // Carousel functionality
-      document.querySelectorAll('.simple-carousel').forEach(function(car){
-        const track = car.querySelector('.simple-carousel-track');
-        const slides = Array.from(track.children);
-        const prev = car.querySelector('.carousel-prev');
-        const next = car.querySelector('.carousel-next');
-        const dots = Array.from(car.querySelectorAll('.carousel-dot'));
-        let index = 0;
-        if(slides.length <= 1){ return; }
-        function go(i){
-          index = (i + slides.length) % slides.length;
-          track.style.transform = 'translateX(' + (-index*100) + '%)';
-          dots.forEach((d,j)=> d.classList.toggle('active', j===index));
-        }
-        prev.addEventListener('click', ()=> go(index-1));
-        next.addEventListener('click', ()=> go(index+1));
-        dots.forEach((d,i)=> d.addEventListener('click', ()=> go(i)));
-      });
-    });
-  </script>
-</body>
-</html>
