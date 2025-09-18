@@ -24,6 +24,9 @@
     .asset-sub-section { margin-bottom: 1.5rem; }
     .asset-sub-title { font-size: 1.25rem; font-weight: 500; margin-bottom: 0.5rem; color: #ffca28; }
     .asset-section.features-breakdown { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+    .note-panel { background: rgba(255, 255, 255, 0.1); border-left: 4px solid #ffca28; padding: 0.75rem 1rem; border-radius: 4px; display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 0.5rem; }
+    .note-panel-icon { font-size: 1.5rem; line-height: 1; }
+    .note-panel-content { font-size: 0.9rem; line-height: 1.4; }
   </style>
 </head>
 <body class="theme-dark">
@@ -42,7 +45,7 @@
       <div class="navbar-start">
         <a href="index.html" class="navbar-item">🏠Home</a>
         <a href="#" class="navbar-item is-active" aria-current="page">🧩Unity Assets</a>
-        <a href="#" class="navbar-item">❓Who we are</a>
+        <!--<a href="#" class="navbar-item">❓Who we are</a>-->
       </div>
     </div>
   </nav>
@@ -211,24 +214,36 @@
           <div class="carousel-dots" role="tablist"><button class="carousel-dot active" aria-label="Slide 1" role="tab"></button></div>
         </div>
         <div class="asset-section introduction">
-          <h4>Introduction 🩺</h4>
+          <h4>👉 Introduction</h4>
           <p>Extensible health & damage layer integrating with the core framework to handle vitality flow: damage reception, mitigation, healing, death and respawn sequences.</p>
         </div>
         <div class="asset-section key-features">
-          <h4>Key Features ✨</h4>
+          <h4>✨ Key Features</h4>
           <ul>
-            <li>🩸 Custom damage type assets</li>
-            <li>🛡️ Resistance & penetration model</li>
-            <li>⚡ Event hooks for damage / death / revive</li>
-            <li>🩹 Heals, shields & over-heal patterns (planned)</li>
-            <li>🧮 Extensible calculation pipeline</li>
+            <li>❤️ <strong>Health management</strong>: Health, damage, death threshold, and respawn mechanics</li>
+            <li>🩹 <strong>Heals & shields</strong>: healings and temporary hit points</li>
+            <li>🩸 <strong>Damage types & sources</strong>: Define your own custom damage types and sources</li>
+            <li>🛡️ <strong>Resistance & penetration model</strong>: Define which resistance statistic reduces each damage type. Define also which penetration statistic applies in the reduction of defensive stats.</li>
+            <li>⚡ <strong>Event hooks</strong>: for damage / heal / death / revive, and more</li>
+            <li>🧮 <strong>Customizable damage calculation pipeline</strong>: apply the damage multipliers, reduction factors, criticals, defense penetration and custom steps in the order you wish.</li>
           </ul>
         </div>
+        
+        <div class="asset-section features-breakdown">
+          <h4>🔍 Features Breakdown</h4>
+          <div class="note-panel">
+            <div class="note-panel-icon">📋</div>
+            <div class="note-panel-content">
+              Detailed features breakdown will be added when this package enters the documentation stage.
+            </div>
+          </div>
+        </div>
+        
         <div class="asset-section requirements">
           <h4>Requirements 📋</h4>
           <ul>
             <li>🧩 SOAP RPG Framework (matching minor version)</li>
-            <li>🖥️ Unity 2021.3 LTS or newer</li>
+            <li>🖥️ Unity 2022 LTS or newer</li>
           </ul>
         </div>
         <div class="asset-section where-to-buy">
@@ -276,11 +291,22 @@
             <li>🛠️ Inspector-driven authoring workflow</li>
           </ul>
         </div>
+        
+        <div class="asset-section features-breakdown">
+          <h4>🔍 Features Breakdown</h4>
+          <div class="note-panel">
+            <div class="note-panel-icon">📋</div>
+            <div class="note-panel-content">
+              Detailed features breakdown will be added when this package enters the documentation stage.
+            </div>
+          </div>
+        </div>
+        
         <div class="asset-section requirements">
           <h4>Requirements 📋</h4>
           <ul>
-            <li>🧩 SOAP RPG Framework</li>
-            <li>🖥️ Unity 2021.3 LTS or newer</li>
+            <li>🧩 SOAP RPG Framework (matching minor version)</li>
+            <li>🖥️ Unity 2022 LTS or newer</li>
           </ul>
         </div>
         <div class="asset-section where-to-buy">
@@ -318,6 +344,34 @@
       $navbarBurgers.forEach( el => {
           el.addEventListener('click', () => {
               const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+          });
+      });
+      
+      // Carousel functionality
+      document.querySelectorAll('.simple-carousel').forEach(function(car){
+        const track = car.querySelector('.simple-carousel-track');
+        const slides = Array.from(track.children);
+        const prev = car.querySelector('.carousel-prev');
+        const next = car.querySelector('.carousel-next');
+        const dots = Array.from(car.querySelectorAll('.carousel-dot'));
+        let index = 0;
+        if(slides.length <= 1){ return; }
+        function go(i){
+          index = (i + slides.length) % slides.length;
+          track.style.transform = 'translateX(' + (-index*100) + '%)';
+          dots.forEach((d,j)=> d.classList.toggle('active', j===index));
+        }
+        prev.addEventListener('click', ()=> go(index-1));
+        next.addEventListener('click', ()=> go(index+1));
+        dots.forEach((d,i)=> d.addEventListener('click', ()=> go(i)));
+      });
+    });
+  </script>
+</body>
+</html>
               const $target = document.getElementById(target);
               el.classList.toggle('is-active');
               $target.classList.toggle('is-active');
