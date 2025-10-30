@@ -278,6 +278,15 @@ body {
     box-shadow: 0 2px 8px rgba(94, 96, 206, 0.08);
 }
 
+/* Launch Sale badge styling */
+.launch-sale-badge {
+    background: rgba(255, 99, 71, 0.2);
+    border: 1.5px solid #ff6347;
+    color: #ffb6a3;
+    font-size: 0.82rem;
+    box-shadow: 0 2px 8px rgba(255, 99, 71, 0.15);
+}
+
 /* Status badge styling - specific colors for each status */
 .status-badge-brainstorming {
     background: rgba(255, 64, 129, 0.18);
