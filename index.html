@@ -49,6 +49,23 @@
                                     <h2 class="section-title unity-assets-title">🧩 Unity Assets</h2>
                                 </div>
                                 <div class="unity-assets-accent-bar"></div>
+                
+                <!-- Package Rename Info Banner -->
+                <div class="info-banner">
+                    <div class="info-banner-icon">ℹ️</div>
+                    <div class="info-banner-content">
+                    <div class="info-banner-title">Package Name Update</div>
+                    <div class="info-banner-text">
+                        The package previously known as <strong>SOAP RPG Framework</strong> has been renamed to <strong>Astra RPG Framework</strong>. This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store.
+                        All functionality remains the same—only the name has changed.<br/>
+                        To complete the transition to the new name, in the upcoming days a new update (v1.1.0) will be released to reflect this change on the namespaces of the codebase, and on the menu from which the package is accessed.<br/>
+                        All changes to the code that require any action on your part will be listed in the update changelog.<br/>
+                        Thank you for your understanding,<br/>
+                        Electric Drill
+                    </div>
+                    </div>
+                </div>
+                
                 <div class="columns is-multiline">
                     <div class="column is-half">
                         <div class="project-card">
@@ -198,7 +215,7 @@
             <div class="contact-invite-box">
                 <h4>Have questions or need more information?</h4>
                 <p>Reach out to us at <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a> for inquiries, feedback, or ideas!</p>
-            </div>
+                    </div>
 
             <!-- Footer -->
             <footer class="footer">
@@ -216,7 +233,7 @@
                     $navbarBurgers.forEach( el => {
                         el.addEventListener('click', () => {
                             // Get the target from the "data-target" attribute
-                            const target = el.dataset.target;
+                            const target = el.dataset.target;     
                             const $target = document.getElementById(target);
                 
                             // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"

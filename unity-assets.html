@@ -54,6 +54,23 @@
     <div class="container">
       <h2 class="section-title unity-assets-title">🧩 Unity Assets</h2>
       <div class="unity-assets-accent-bar"></div>
+      
+      <!-- Package Rename Info Banner -->
+      <div class="info-banner">
+        <div class="info-banner-icon">ℹ️</div>
+        <div class="info-banner-content">
+          <div class="info-banner-title">Package Name Update</div>
+          <div class="info-banner-text">
+            The package previously known as <strong>SOAP RPG Framework</strong> has been renamed to <strong>Astra RPG Framework</strong>. This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store.
+            All functionality remains the same—only the name has changed.<br/>
+            To complete the transition to the new name, in the upcoming days a new update (v1.1.0) will be released to reflect this change on the namespaces of the codebase, and on the menu from which the package is accessed.<br/>
+            All changes to the code that require any action on your part will be listed in the update changelog.<br/>
+            Thank you for your understanding,<br/>
+            Electric Drill
+          </div>
+        </div>
+      </div>
+      
       <!-- Astra RPG Framework Card -->
       <div class="project-card asset-card" id="soap-rpg-framework">
         <div class="asset-title-container">
@@ -331,41 +348,41 @@
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Roadmap Philosophy</h2>
-      <p class="hero-text">
-        Each package is fully isolated—only the Astra RPG Framework is required as a foundation for the others. All modules are modular, testable, designer-friendly, and make minimal assumptions about your project structure.
-        We prioritize ScriptableObject-first, data-driven design, enabling you to tweak and balance your game directly in play mode, without recompilations or code changes.
-      </p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a></span>
-    </div>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      // Hamburger menu functionality
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      <h2 class="section-title">Roadmap Philosophy</h2>d—only the Astra RPG Framework is required as a foundation for the others. All modules are modular, testable, designer-friendly, and make minimal assumptions about your project structure.
+      <p class="hero-text">data-driven design, enabling you to tweak and balance your game directly in play mode, without recompilations or code changes.
       $navbarBurgers.forEach( el => {
           el.addEventListener('click', () => {
               const target = el.dataset.target;
               const $target = document.getElementById(target);
-              el.classList.toggle('is-active');
-              $target.classList.toggle('is-active');
-          });
+              el.classList.toggle('is-active');ss="footer">
+              $target.classList.toggle('is-active');class="content has-text-centered">
+          });<span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a></span>
       });
       
       // Carousel functionality
-      document.querySelectorAll('.simple-carousel').forEach(function(car){
+      document.querySelectorAll('.simple-carousel').forEach(function(car){function(){
         const track = car.querySelector('.simple-carousel-track');
-        const slides = Array.from(track.children);
+        const slides = Array.from(track.children);ocument.querySelectorAll('.navbar-burger'), 0);
         const prev = car.querySelector('.carousel-prev');
-        const next = car.querySelector('.carousel-next');
-        const dots = Array.from(car.querySelectorAll('.carousel-dot'));
-        let index = 0;
+        const next = car.querySelector('.carousel-next');istener('click', () => {
+        const dots = Array.from(car.querySelectorAll('.carousel-dot'));arget;
+        let index = 0;rget = document.getElementById(target);
         if(slides.length <= 1){ return; }
+        function go(i){
+          index = (i + slides.length) % slides.length;
+          track.style.transform = 'translateX(' + (-index*100) + '%)';
+          dots.forEach((d,j)=> d.classList.toggle('active', j===index));
+        }
+        prev.addEventListener('click', ()=> go(index-1));ar){
+        next.addEventListener('click', ()=> go(index+1));onst track = car.querySelector('.simple-carousel-track');
+        dots.forEach((d,i)=> d.addEventListener('click', ()=> go(i))); const slides = Array.from(track.children);
+      });st prev = car.querySelector('.carousel-prev');
+    }); const next = car.querySelector('.carousel-next');
+  </script> const dots = Array.from(car.querySelectorAll('.carousel-dot'));
+</body>        let index = 0;
+
+
+</html>        if(slides.length <= 1){ return; }
         function go(i){
           index = (i + slides.length) % slides.length;
           track.style.transform = 'translateX(' + (-index*100) + '%)';
