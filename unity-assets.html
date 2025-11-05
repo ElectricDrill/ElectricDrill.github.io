@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unity Assets - Electric Drill</title>
   <link rel="stylesheet" href="main.css">
+  <script src="assets/js/carousel.js" defer></script>
   <style>
     .simple-carousel { position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.08); border-radius:10px; background:rgba(255,255,255,0.03); margin:1rem 0 1.75rem; }
     .simple-carousel-track { display:flex; width:100%; transition:transform .55s cubic-bezier(.4,.15,.2,1); }
@@ -59,17 +60,14 @@
       <div class="info-banner">
         <div class="info-banner-icon">ℹ️</div>
         <div class="info-banner-content">
-          <div class="info-banner-title">Package Name Update</div>
-          <div class="info-banner-text">
-            The package previously known as <strong>SOAP RPG Framework</strong> has been renamed to <strong>Astra RPG Framework</strong>. This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store.
-            All functionality remains the same—only the name has changed.<br/>
-            To complete the transition to the new name, in the upcoming days a new update (v1.1.0) will be released to reflect this change on the namespaces of the codebase, and on the menu from which the package is accessed.<br/>
-            All changes to the code that require any action on your part will be listed in the update changelog.<br/>
-            Thank you for your understanding,<br/>
-            Electric Drill
-          </div>
+        <div class="info-banner-title">Package Name Update</div>
+        <div class="info-banner-text">
+            The package previously known as <strong>SOAP RPG Framework</strong> (v1.0.0) has been renamed to <strong>Astra RPG Framework</strong> (v1.1.0). This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store. All functionality remains the same—only the name has changed.<br/>
+            Since the rebranding touched also the codebase (UPM package name and namespaces), if you are running your project on version 1.0.0 I would advise you to follow the <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/migration-guide.html" target="_blank" rel="noopener noreferrer">migration guide</a> to ensure a smooth upgrade.<br/>
+            Thanks for your understanding.
         </div>
-      </div>
+        </div>
+    </div>
       
       <!-- Astra RPG Framework Card -->
       <div class="project-card asset-card" id="soap-rpg-framework">
