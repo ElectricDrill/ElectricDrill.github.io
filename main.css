@@ -287,6 +287,15 @@ body {
     box-shadow: 0 2px 8px rgba(255, 99, 71, 0.15);
 }
 
+/* Version badge styling */
+.version-badge {
+    background: rgba(96, 210, 201, 0.18);
+    border: 1.5px solid #439bac;
+    color: #a8edea;
+    font-size: 0.82rem;
+    box-shadow: 0 2px 8px rgba(94, 96, 206, 0.08);
+}
+
 /* Status badge styling - specific colors for each status */
 .status-badge-brainstorming {
     background: rgba(255, 64, 129, 0.18);
