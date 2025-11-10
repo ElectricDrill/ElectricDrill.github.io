@@ -345,43 +345,43 @@
     </div>
   </section>
 
-  <section class="section">
+ <section class="section">
     <div class="container">
-      <h2 class="section-title">Roadmap Philosophy</h2>d—only the Astra RPG Framework is required as a foundation for the others. All modules are modular, testable, designer-friendly, and make minimal assumptions about your project structure.
-      <p class="hero-text">data-driven design, enabling you to tweak and balance your game directly in play mode, without recompilations or code changes.
+      <h2 class="section-title">Roadmap Philosophy</h2>
+      <p class="hero-text">
+        Each package is fully isolated—only the Astra RPG Framework is required as a foundation for the others. All modules are modular, testable, designer-friendly, and make minimal assumptions about your project structure.
+        We prioritize ScriptableObject-first, data-driven design, enabling you to tweak and balance your game directly in play mode, without recompilations or code changes.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a></span>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      // Hamburger menu functionality
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
       $navbarBurgers.forEach( el => {
           el.addEventListener('click', () => {
               const target = el.dataset.target;
               const $target = document.getElementById(target);
-              el.classList.toggle('is-active');ss="footer">
-              $target.classList.toggle('is-active');class="content has-text-centered">
-          });<span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a></span>
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+          });
       });
       
       // Carousel functionality
-      document.querySelectorAll('.simple-carousel').forEach(function(car){function(){
+      document.querySelectorAll('.simple-carousel').forEach(function(car){
         const track = car.querySelector('.simple-carousel-track');
-        const slides = Array.from(track.children);ocument.querySelectorAll('.navbar-burger'), 0);
+        const slides = Array.from(track.children);
         const prev = car.querySelector('.carousel-prev');
-        const next = car.querySelector('.carousel-next');istener('click', () => {
-        const dots = Array.from(car.querySelectorAll('.carousel-dot'));arget;
-        let index = 0;rget = document.getElementById(target);
+        const next = car.querySelector('.carousel-next');
+        const dots = Array.from(car.querySelectorAll('.carousel-dot'));
+        let index = 0;
         if(slides.length <= 1){ return; }
-        function go(i){
-          index = (i + slides.length) % slides.length;
-          track.style.transform = 'translateX(' + (-index*100) + '%)';
-          dots.forEach((d,j)=> d.classList.toggle('active', j===index));
-        }
-        prev.addEventListener('click', ()=> go(index-1));ar){
-        next.addEventListener('click', ()=> go(index+1));onst track = car.querySelector('.simple-carousel-track');
-        dots.forEach((d,i)=> d.addEventListener('click', ()=> go(i))); const slides = Array.from(track.children);
-      });st prev = car.querySelector('.carousel-prev');
-    }); const next = car.querySelector('.carousel-next');
-  </script> const dots = Array.from(car.querySelectorAll('.carousel-dot'));
-</body>        let index = 0;
-
-
-</html>        if(slides.length <= 1){ return; }
         function go(i){
           index = (i + slides.length) % slides.length;
           track.style.transform = 'translateX(' + (-index*100) + '%)';
