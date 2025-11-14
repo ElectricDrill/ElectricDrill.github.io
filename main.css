@@ -661,9 +661,9 @@ body {
 
 /* Info banner for package rename */
 .info-banner {
-    background: linear-gradient(135deg, rgba(255, 202, 40, 0.15) 0%, rgba(255, 202, 40, 0.08) 100%);
-    border: 1px solid rgba(255, 202, 40, 0.3);
-    border-left: 4px solid #ffca28;
+    background: linear-gradient(135deg, #5865F2 0%, #404EED 100%);
+    border: 1px solid rgba(88, 101, 242, 0.25);
+    border-left: 4px solid #5865F2;
     padding: 1rem 1.25rem;
     border-radius: 8px;
     margin: 1.5rem 0;
@@ -683,14 +683,42 @@ body {
 }
 
 .info-banner-title {
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 1.35rem; /* Increased size */
     margin-bottom: 0.35rem;
-    color: #ffca28;
+    color: #fff;
+    letter-spacing: 0.5px;
 }
 
 .info-banner-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    opacity: 0.95;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.98;
+    color: #e3e6fa;
+}
+
+.info-banner-text a {
+    color: inherit;
+    text-decoration: none;
+    color: #23349d;
+}
+
+.discord-join-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.65rem 1.5rem;
+    background: #f0f0ff;
+    color: #5865F2;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.discord-join-btn:hover {
+    background: #e3edff96;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
