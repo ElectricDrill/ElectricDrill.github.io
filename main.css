@@ -322,9 +322,9 @@ body {
 }
 
 .status-badge-documentation {
-    background: rgba(156, 39, 176, 0.18);
-    border-color: #9c27b0;
-    color: #9c27b0;
+    background: rgba(187, 43, 212, 0.171);
+    border-color: #c820e6;
+    color: #d920fa;
 }
 
 .status-badge-publish {
