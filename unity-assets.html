@@ -189,7 +189,7 @@
         <div class="asset-section requirements">
           <h4>📋 Requirements</h4>
           <ul>
-            <li>🖥️ Unity 2022 LTS or newer</li>
+            <li>🖥️ Unity 6 LTS or newer</li>
             <li>⚙️ .NET Standard 2.1 compatible scripting backend</li>
             <li>☑️ No third-party dependencies</li>
           </ul>
@@ -201,6 +201,8 @@
         <div class="asset-section contacts">
           <h4>📬 Information & Contact</h4>
           <p>Questions, feedback, or bugs? Email us at <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+          <p>Chat with the community on Discord: <a href="https://discord.gg/nJVRMkGrZg" class="contact-link" target="_blank" rel="noopener noreferrer">Discord Server</a></p>
+          <p>Discuss on Unity Forums: <a href="https://discussions.unity.com/t/tired-of-monolithic-rpg-frameworks-introducing-astra-rpg-the-flexible-zero-setup-core-framework/1693047" class="contact-link" target="_blank" rel="noopener noreferrer">Unity Forum Discussion</a></p>
         </div>
         <div class="asset-section links">
           <h4>🔗 Links</h4>
@@ -219,7 +221,7 @@
           <h3 class="project-title">💚 Astra RPG Health</h3>
           <div class="asset-labels">
             <span class="badge dependency-badge">🔗 Requires: Astra RPG Framework</span>
-            <span class="badge status-badge-validation">✅ Status: Validation</span>
+            <span class="badge status-badge-documentation">📚 Status: Documentation</span>
           </div>
         </div>
         <div class="simple-carousel" data-carousel>
@@ -232,28 +234,127 @@
         </div>
         <div class="asset-section introduction">
           <h4>👉 Introduction</h4>
-          <p>Extensible health & damage layer integrating with the core framework to handle vitality flow: damage reception, mitigation, healing, death and respawn sequences.</p>
+          <p><strong>A complete health and damage system built on Astra RPG Framework's data-driven foundation.</strong></p>
+          <p>Astra RPG Health adds robust health management to your entities. Handle damage, healing, death, and resurrection with a flexible pipeline that adapts to your game's mechanics.</p>
+          <p>Simple to set up, powerful in action. Customize damage types, reduction formulas, and calculation pipelines without touching code.</p>
         </div>
         <div class="asset-section key-features">
           <h4>✨ Key Features</h4>
           <ul>
-            <li>❤️ <strong>Health management</strong>: Health, damage, death threshold, and respawn mechanics</li>
-            <li>🩹 <strong>Heals & shields</strong>: healings and temporary hit points</li>
-            <li>🩸 <strong>Damage types & sources</strong>: Define your own custom damage types and sources</li>
-            <li>🛡️ <strong>Resistance & penetration model</strong>: Define which resistance statistic reduces each damage type. Define also which penetration statistic applies in the reduction of defensive stats.</li>
-            <li>⚡ <strong>Event hooks</strong>: for damage / heal / death / revive, and more</li>
-            <li>📈 <strong>Health Scaling:</strong> The Health Scaling Component enhances the expressiveness of Scaling Formulas in the Astra RPG Framework, allowing skills and attacks to scale based on an entities' health.</li>
-            <li>🧮 <strong>Customizable damage calculation pipeline</strong>: apply the damage multipliers, reduction factors, criticals, defense penetration and custom steps in the order you wish.</li>
+            <li>❤️ <strong>Health Management:</strong> Complete system for HP, damage, healing, death, and resurrection</li>
+            <li>🗡️ <strong>Damage Types & Sources:</strong> Define custom damage types with defensive stats and armor penetration. Define damage sources for advanced game mechanics or for damage logging</li>
+            <li>🛡️ <strong>Damage Reduction:</strong> Multiple reduction functions—flat, percentage, logarithmic, or custom</li>
+            <li>🛡️ <strong>Defense Penetration:</strong> Support for defense penetration mechanics to bypass or reduce enemy defenses</li>
+            <li>⚙️ <strong>Damage Pipeline:</strong> Fully customizable calculation pipeline with reorderable steps</li>
+            <li>🩹 <strong>Healing System:</strong> Heal sources and mechanics that integrate seamlessly with your game</li>
+            <li>🧛 <strong>Lifesteal:</strong> Configurable lifesteal system. Supports damage-type-specific lifesteal configurations</li>
+            <li>💀 <strong>Death & Resurrection:</strong> Flexible strategies for death behavior and bringing entities back</li>
+            <li>📈 <strong>Health Scaling:</strong> New scaling component for formulas based on current, max, or missing HP</li>
+            <li>⚡ <strong>Health Events:</strong> Extended game events for damage, healing, death, and resurrection</li>
+          </ul>
+        </div>
+        <div class="asset-section implementation-notes">
+          <h4>⚙️ Implemented on top of ScriptableObjects architecture</h4>
+          <ul>
+            <li>🎨 <strong>Inspector-driven:</strong> Configure damage types, sources, and strategies directly in the Unity Inspector</li>
+            <li>🧩 <strong>Modular and reusable:</strong> Share damage calculation strategies across entities or customize per-entity</li>
+            <li>🧪 <strong>Test in play mode:</strong> Tweak damage formulas, reduction functions, and pipeline steps without recompiling and without restarting play mode</li>
           </ul>
         </div>
         
         <div class="asset-section features-breakdown">
           <h4>🔍 Features Breakdown</h4>
-          <div class="note-panel">
-            <div class="note-panel-icon">📋</div>
-            <div class="note-panel-content">
-              Detailed features breakdown will be added when this package enters the documentation stage.
-            </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">❤️ Health Management</h5>
+            <p>A new MonoBehaviour component adds health management to any entity. Entities can take damage, heal, die, and resurrect.</p>
+            <p>Set maximum health, track current health, and configure death thresholds. Everything integrates with the core framework's stats and attributes.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">🗡️ Damage Types & Sources</h5>
+            <p><strong>Damage types</strong> represent categories of damage in your game—Physical, Magic, Fire, Poison, etc. Define your own types as ScriptableObjects.</p>
+            <p>Optionally link each damage type to a defensive statistic. For example, "Physical Damage" reduced by "Armor", or "Magic Damage" reduced by "Magic Resistance". True damage can be implemented as a damage type with no associated defensive stat.</p>
+            <p>Assign piercing statistics to ignore portions of defense. "Armor Pierce" could reduce the effectiveness of "Armor" when calculating net damage.</p>
+            <p><strong>Damage sources</strong> represent the origin of damage—Skill, Trap, Environmental, etc. They can be used for advanced damage handling scenarios (e.g. damage source based damage reduction), or for tracking damage in combat logs (e.g. player took 350 damage from traps, 2400 damage from enemies, and 0 damage form environment).
+               Also these are defined as ScriptableObjects, allowing flexible categorization to tailor damage handling to your needs.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">🛡️ Damage Reduction Functions</h5>
+            <p>Model how defensive stats reduce incoming damage using mathematical functions. The package includes three common functions:</p>
+            <ul>
+              <li><strong>Flat reduction:</strong> Each point of defense reduces damage by a fixed amount. Predictable and easy to balance.</li>
+              <li><strong>Percentage reduction:</strong> Defense directly expresses damage reduction percentage. Effective across varying damage ranges.</li>
+              <li><strong>Logarithmic reduction:</strong> Diminishing returns as defense increases. Prevents complete damage negation.</li>
+            </ul>
+            <p>Implement custom reduction functions if the defaults don't fit your needs.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">🛡️ Defense Reduction Functions</h5>
+            <p>Piercing stats use reduction functions too, determining how they bypass defense.</p>
+            <p>The same flat, percentage, and logarithmic functions are available out of the box.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">⚙️ Damage Calculation Pipeline</h5>
+            <p>The damage calculation pipeline transforms raw damage into net damage through customizable steps. Configure the order of operations to match your game's mechanics.</p>
+            <p>Pre-defined steps include:</p>
+            <ul>
+              <li><strong>Defense mitigation:</strong> Apply defensive stats and piercing calculations</li>
+              <li><strong>Damage modifiers:</strong> Apply percentage-based buffs/debuffs for weaknesses, resistances, immunities</li>
+              <li><strong>Barrier absorption:</strong> Temporary hit points absorb damage before actual HP</li>
+              <li><strong>Critical multiplier:</strong> Multiply damage for critical hits</li>
+            </ul>
+            <p>Set a default pipeline for all entities, or assign custom pipelines to specific entities. Override pipelines at runtime for temporary effects or boss mechanics.</p>
+            <p>For example, add a damage limiter step to boss entities to cap incoming damage at 10% of max HP. Or implement a debuff that doubles electric damage by swapping in a custom pipeline with an extra electric damage multiplier step.</p>
+            <p>This flexibility makes implementing complex damage mechanics straightforward.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">🩹 Heal Sources</h5>
+            <p>Heal sources identify where healing comes from—Potion, Skill, Regeneration, Lifesteal, Ally, Self, etc.</p>
+            <p>Use heal sources to implement mechanics like bonus healing from specific sources or reduced healing from enemies.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">🧛 Lifesteal</h5>
+            <p>Lifesteal converts dealt damage into health for the attacker. The system is highly configurable.</p>
+            <p>Link lifesteal stats to specific damage types and choose which pipeline step it applies to—raw damage, net damage, pre-mitigation, post-mitigation, before barrier, after barrier, etc.</p>
+            <p>You can fine-tune lifesteal application timing to fit your game's design.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">💀 Death</h5>
+            <p>Entities die when health reaches zero, or at a custom death threshold. Negative thresholds enable "down but not out" mechanics.</p>
+            <p>Death strategies define what happens on death. Set a default strategy and override for specific entities.</p>
+            <p>Pre-defined death strategies:</p>
+            <ul>
+              <li><strong>Disable Game Object:</strong> Disables the entity for later resurrection</li>
+              <li><strong>Destroy Game Object:</strong> Removes the entity permanently</li>
+              <li><strong>No-op Strategy:</strong> Does nothing on death</li>
+              <li><strong>Multiple Death Strategies:</strong> Chain strategies together</li>
+            </ul>
+            <p>Use death strategies to integrate with your architecture—return to object pools, trigger events, play animations, drop loot, etc.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">😇 Resurrection</h5>
+            <p>Bring dead entities back to life through the API. Restore health as a flat value or percentage of maximum health.</p>
+            <p>Resurrection strategies define behavior when resurrecting. Out of the box:</p>
+            <ul>
+              <li><strong>Enable Game Object:</strong> Re-enables disabled entities</li>
+              <li><strong>No-op Strategy:</strong> Does nothing on resurrection</li>
+              <li><strong>Multiple Resurrection Strategies:</strong> Execute multiple strategies in sequence</li>
+            </ul>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">📈 Health Scaling Component</h5>
+            <p>Extend scaling formulas to use health values. Scale based on maximum health, current health, or missing health.</p>
+            <p>Build abilities that grow stronger as health decreases. Create healing that scales with max HP. Design berserker mechanics that reward risk. And more.</p>
+          </div>
+          <div class="asset-sub-section">
+            <h5 class="asset-sub-title">⚡ Health Game Events</h5>
+            <p>New game events for health-related actions:</p>
+            <ul>
+              <li>Damage taken</li>
+              <li>Healing received and applied</li>
+              <li>Death and resurrection</li>
+              <li>And many more...</li>
+            </ul>
+            <p>Wire these events to your game logic for abilities, UI updates, sound effects, particles, etc.</p>
           </div>
         </div>
         
@@ -261,16 +362,17 @@
           <h4>Requirements 📋</h4>
           <ul>
             <li>🛠️ Astra RPG Framework (matching minor version)</li>
-            <li>🖥️ Unity 2022 LTS or newer</li>
+            <li>🖥️ Unity 6 LTS or newer</li>
           </ul>
         </div>
         <div class="asset-section where-to-buy">
           <h4>Where to Buy 🛒</h4>
-          <p>Planned for Unity Asset Store after validation & documentation phases.</p>
+          <p>Planned for Unity Asset Store after documentation phase.</p>
         </div>
         <div class="asset-section contacts">
           <h4>Information & Contact 📬</h4>
-            <p>Feature requests welcome: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+            <p>Questions, feedback, or bugs? Email us at: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+            <p>Chat with the community on Discord: <a href="https://discord.gg/nJVRMkGrZg" class="contact-link" target="_blank" rel="noopener noreferrer">Discord Server</a></p>
         </div>
         <div class="asset-section links">
           <h4>Links 🔗</h4>
@@ -324,7 +426,7 @@
           <h4>Requirements 📋</h4>
           <ul>
             <li>🛠️ Astra RPG Framework (matching minor version)</li>
-            <li>🖥️ Unity 2022 LTS or newer</li>
+            <li>🖥️ Unity 6 LTS or newer</li>
           </ul>
         </div>
         <div class="asset-section where-to-buy">
@@ -334,6 +436,7 @@
         <div class="asset-section contacts">
           <h4>Information & Contact 📬</h4>
           <p>Early design collaboration: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a>.</p>
+          <p>Chat with the community on Discord: <a href="https://discord.gg/nJVRMkGrZg" class="contact-link" target="_blank" rel="noopener noreferrer">Discord Server</a></p>
         </div>
         <div class="asset-section links">
           <h4>Links 🔗</h4>
@@ -355,7 +458,7 @@
 
   <footer class="footer">
     <div class="content has-text-centered">
-      <span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a></span>
+      <span>Contact: <a href="mailto:electricdrill.info@gmail.com" class="contact-link">electricdrill.info@gmail.com</a> • <a href="https://discord.gg/nJVRMkGrZg" class="contact-link" target="_blank" rel="noopener noreferrer">Discord Server</a></span>
     </div>
   </footer>
   <script>
