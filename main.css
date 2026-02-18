@@ -279,7 +279,7 @@ body {
 }
 
 /* Launch Sale badge styling */
-.launch-sale-badge {
+.sale-badge {
     background: rgba(255, 99, 71, 0.2);
     border: 1.5px solid #ff6347;
     color: #ffb6a3;
