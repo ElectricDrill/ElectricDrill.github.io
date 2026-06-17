@@ -75,7 +75,7 @@
           <h3 class="project-title">🛠️ Astra RPG Framework</h3>
           <div class="asset-labels">
             <!--span class="badge sale-badge">🔥 50% Off now!</span-->
-            <span class="badge version-badge">🏷️ v1.5.1 - 2026-04-04</span>
+            <span class="badge version-badge">🏷️ v2.0.0 - 2026-05-05</span>
           </div>
         </div>
         <div class="simple-carousel" data-carousel>
@@ -222,28 +222,52 @@
         </div>
       </div>
 
-      <!-- Astra RPG Health Card -->
+      <!-- Astra Health Card -->
       <div class="project-card asset-card rpg-health" id="astra-rpg-health">
         <div class="asset-title-container">
-          <h3 class="project-title">💚 Astra RPG Health</h3>
+          <h3 class="project-title">💚 Astra Health</h3>
           <div class="asset-labels">
             <!--div class="badge coming-soon-badge">🚀 Available now!</div-->
             <span class="badge dependency-badge">🔗 Requires: Astra RPG Framework</span>
             <span class="badge status-badge-publish">🚀 Status: Publish</span>
           </div>
         </div>
-        <div class="simple-carousel" data-carousel>
+                <div class="simple-carousel" data-carousel>
           <div class="simple-carousel-track">
-            <div class="simple-carousel-slide"><img src="assets/electric-drill.png" alt="Placeholder health module"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/1.png" alt="Health screenshot 1"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/2.png" alt="Health screenshot 2"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/3.png" alt="Health screenshot 3"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/4.png" alt="Health screenshot 4"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/5.png" alt="Health screenshot 5"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/6.png" alt="Health screenshot 6"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/7.png" alt="Health screenshot 7"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/8.png" alt="Health screenshot 8"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/9.png" alt="Health screenshot 9"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/10.png" alt="Health screenshot 10"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/11.png" alt="Health screenshot 11"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/12.png" alt="Health screenshot 12"></div>
+            <div class="simple-carousel-slide"><img src="assets/unity-assets/astra-health/13.png" alt="Health screenshot 13"></div>
           </div>
-          <button class="carousel-btn carousel-prev" aria-label="Previous" disabled>‹</button>
-          <button class="carousel-btn carousel-next" aria-label="Next" disabled>›</button>
-          <div class="carousel-dots" role="tablist"><button class="carousel-dot active" aria-label="Slide 1" role="tab"></button></div>
+          <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+          <div class="carousel-dots" role="tablist" aria-label="Slide selector">
+            <button class="carousel-dot active" aria-label="Slide 1" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 2" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 3" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 4" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 5" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 6" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 7" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 8" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 9" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 10" role="tab"></button>
+            <button class="carousel-dot" aria-label="Slide 11" role="tab"></button>
+          </div>
         </div>
         <div class="asset-section introduction">
           <h4>👉 Introduction</h4>
           <p><strong>A complete health and damage system built on Astra RPG Framework's data-driven foundation.</strong></p>
-          <p>Astra RPG Health adds robust health management to your entities. Handle damage, healing, death, and resurrection with a flexible pipeline that adapts to your game's mechanics.</p>
+          <p>Astra Health adds robust health management to your entities. Handle damage, healing, death, and resurrection with a flexible pipeline that adapts to your game's mechanics.</p>
           <p>Simple to set up, powerful in action. Customize damage types, reduction formulas, and calculation pipelines without touching code.</p>
         </div>
         <div class="asset-section key-features">
@@ -329,24 +353,12 @@
             <h5 class="asset-sub-title">💀 Death</h5>
             <p>Entities die when health reaches zero, or at a custom death threshold. Negative thresholds enable "down but not out" mechanics.</p>
             <p>Death strategies define what happens on death. Set a default strategy and override for specific entities.</p>
-            <p>Pre-defined death strategies:</p>
-            <ul>
-              <li><strong>Disable Game Object:</strong> Disables the entity for later resurrection</li>
-              <li><strong>Destroy Game Object:</strong> Removes the entity permanently</li>
-              <li><strong>No-op Strategy:</strong> Does nothing on death</li>
-              <li><strong>Multiple Death Strategies:</strong> Chain strategies together</li>
-            </ul>
             <p>Use death strategies to integrate with your architecture—return to object pools, trigger events, play animations, drop loot, etc.</p>
           </div>
           <div class="asset-sub-section">
             <h5 class="asset-sub-title">😇 Resurrection</h5>
             <p>Bring dead entities back to life through the API. Restore health as a flat value or percentage of maximum health.</p>
-            <p>Resurrection strategies define behavior when resurrecting. Out of the box:</p>
-            <ul>
-              <li><strong>Enable Game Object:</strong> Re-enables disabled entities</li>
-              <li><strong>No-op Strategy:</strong> Does nothing on resurrection</li>
-              <li><strong>Multiple Resurrection Strategies:</strong> Execute multiple strategies in sequence</li>
-            </ul>
+            <p>Resurrection strategies define behavior when resurrecting.
           </div>
           <div class="asset-sub-section">
             <h5 class="asset-sub-title">📈 Health Scaling Component</h5>
