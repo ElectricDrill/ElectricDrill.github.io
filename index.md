@@ -3,8 +3,8 @@ _layout: landing
 ---
 
 > [!NOTE]
-> Join the Astra RPG Discord server!  
-> There is now a dedicated **Discord server** for Astra RPG Framework and its extensions.
+> Join the Astra Discord server!  
+> There is now a dedicated **Discord server** for Astra Framework and its extensions.
 > Join to **receive notifications** about new extension releases and important updates, to **ask for new features**, **report bugs**, **share ideas**, and **showcase your Astra creations** with other developers.  
 > <span style="font-size:1.18em; font-weight:600;">💬 Join the Discord Server: https://discord.gg/nJVRMkGrZg</span>
 
@@ -12,7 +12,7 @@ _layout: landing
 
 ### 👉 Introduction
 
-**A complete health and damage system built on Astra RPG Framework's data-driven foundation.**
+**A complete health and damage system built on Astra Framework's data-driven foundation.**
 
 Astra Health adds robust health management to your entities. Handle damage, healing, death, and resurrection with a flexible pipeline that adapts to your game's mechanics.
 
