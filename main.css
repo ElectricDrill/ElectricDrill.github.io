@@ -278,6 +278,15 @@ body {
     box-shadow: 0 2px 8px rgba(94, 96, 206, 0.08);
 }
 
+/* Coming Date badge styling (e.g. "Coming Aug. 1st") */
+.coming-date-badge {
+    background: rgba(255, 152, 0, 0.2);
+    border: 1.5px solid #ff9800;
+    color: #ffb74d;
+    font-size: 0.82rem;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+}
+
 /* Launch Sale badge styling */
 .sale-badge {
     background: rgba(255, 99, 71, 0.2);
