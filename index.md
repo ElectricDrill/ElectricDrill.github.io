@@ -150,7 +150,7 @@ Wire these events to your game logic for abilities, UI updates, sound effects, p
 
 ### 🛒 Where to Buy
 
-Unity Asset Store: [Astra Health](#) *(coming soon)*
+Unity Asset Store: [Astra Health](https://assetstore.unity.com/packages/tools/game-toolkits/astra-health-damage-and-health-management-351950)
 
 ---
 
@@ -158,6 +158,6 @@ Unity Asset Store: [Astra Health](#) *(coming soon)*
 
 Questions, feedback, or bugs? Email us at [electricdrill.info@gmail.com](mailto:electricdrill.info@gmail.com).
 
-Unity Forum: [Astra Health Discussion](#) *(coming soon)*
+Unity Forum: [Astra Health Discussion](https://discussions.unity.com/t/50-off-released-tired-of-rigid-combat-systems-meet-astra-health-a-modular-pipeline-based-damage-health-system-for-any-genre/1723594)
 
 Discord: [Astra Health Discord Server](https://discord.gg/nJVRMkGrZg)
